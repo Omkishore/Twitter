@@ -27,11 +27,11 @@ public class KafkaStreamingApp {
 		  
 		  //builder.stream("test1",Consumed.with(stringSerde, stringSerde))
 		  
-		  KStream<String, String> simpleFirstStream = builder.stream("test1",Consumed.with(stringSerde, stringSerde));
+		  KStream<String, String> simpleFirstStream = builder.stream("twitter",Consumed.with(stringSerde, stringSerde));
 		  KStream<String, String> upperCasedStream = simpleFirstStream.filter((key, value) -> value.contains("india"));
 				  //.mapValues (v -> v.toUpperCase());
 				  
-		  upperCasedStream.to( "test3",Produced.with(stringSerde, stringSerde));
+		  upperCasedStream.to( "twitter-output",Produced.with(stringSerde, stringSerde));
 		  
 		  KafkaStreams kafkaStreams = new KafkaStreams(builder.build(),streamsConfig);
 		  kafkaStreams.start();
