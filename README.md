@@ -1,6 +1,5 @@
-t# Twitter
-Processing Twitter  Data with KStreams
-
+# Twitter
+Processing Twitter  Data with KStreams.
 
 
 # to Start ZooKeeper
@@ -9,7 +8,7 @@ Processing Twitter  Data with KStreams
 # to Start Kafka Server
 .\bin\windows\kafka-server-start.bat .\config\server.properties
 
-#to create topic
+# to create topic
 .\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic twitter
 
 .\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic twitter_output
