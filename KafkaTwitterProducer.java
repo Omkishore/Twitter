@@ -34,7 +34,7 @@ public class KafkaTwitterProducer {
 	           String consumerSecret = "yB5Z023LqxzQfVvFnCunlO9gV0XSvNFX2LWfmAUncHONcMwrv8";
 	           String accessToken = "849180345496780800-pys8Z3MrLdKBHhG4w27Jr106p8xDqSU";
 	           String accessTokenSecret = "SPp3iFnBzfFrK4sthMQSsZMaG2LNW9cIEhOw5lScuJFib";
-	           String topicName = "test1";
+	           String topicName = "twitter";
 	           
 	           ConfigurationBuilder cb = new ConfigurationBuilder();
 	           cb.setDebugEnabled(true).setOAuthConsumerKey(consumerKey).setOAuthConsumerSecret(consumerSecret)
